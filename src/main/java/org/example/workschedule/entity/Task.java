@@ -1,24 +1,31 @@
 package org.example.workschedule.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "tasks")
 public class Task {
 
     @Id
-    private int id;
-    private String taskName;
-    private String taskDescription;
-    private String current_date;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    public int getId() {
+    @Column(name = "title")
+    private String taskName;
+
+    @Column(name = "description")
+    private String taskDescription;
+
+    @Column(name = "created_date")
+    private LocalDateTime created_date;
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -38,12 +45,12 @@ public class Task {
         this.taskDescription = taskDescription;
     }
 
-    public String getCurrent_date() {
-        return current_date;
+    public LocalDateTime getCreated_date() {
+        return  created_date;
     }
 
-    public void setCurrent_date(String current_date) {
-        this.current_date = current_date;
+    public void setCreated_date(LocalDateTime created_date) {
+        this.created_date = created_date;
     }
 
     @Override
@@ -52,7 +59,7 @@ public class Task {
                 "taskName='" + taskName + '\'' +
                 ", id=" + id +
                 ", taskDescription='" + taskDescription + '\'' +
-                ", current_date='" + current_date + '\'' +
+                ", current_date='" + created_date + '\'' +
                 '}';
     }
 }

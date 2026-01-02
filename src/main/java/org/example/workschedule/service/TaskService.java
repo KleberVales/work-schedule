@@ -37,7 +37,7 @@ public class TaskService {
 //                      Reading specific data
 //===================================================================================
 
-    public Optional<Task> findById(int id) {
+    public Optional<Task> findById(Long id) {
         return taskRepository.findById(id);
     }
 
@@ -53,7 +53,7 @@ public class TaskService {
 //                      Delete database data
 //===================================================================================
 
-    public void deleteById(int id) {
+    public void deleteById(Long id) {
         taskRepository.deleteById(id);
     }
 
