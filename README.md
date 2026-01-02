@@ -1,11 +1,11 @@
 # work-schedule
 
-- Sistema de Gerenciamento de Tarefas (To-Do List)
+- Task Management System (To-Do List)
 
-   - CRUD completo (criar, listar, atualizar, excluir tarefas).
+   - Full CRUD (create, list, update, delete tasks).
 
-   - Spring MVC para requisições HTTP.
+   - Spring MVC for HTTP requests.
 
-   - Spring Data JPA para persistência.
+   - Spring Data JPA for persistence.
 
-   - Autenticação e autorização com Spring Security.
+   - Authentication and authorization with Spring Security.
